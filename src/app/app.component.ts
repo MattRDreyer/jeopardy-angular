@@ -10,7 +10,7 @@ import { JeopardyDataService } from './jeopardy-data.service'
 export class AppComponent implements OnInit {
   title = 'Jeopardy API';
 
-  questions: any;
+  question: any;
   successMessage: string;
   errorMessage: string;
 
@@ -20,8 +20,8 @@ export class AppComponent implements OnInit {
     this.useanything.getRecords("random") //random is the endpoint
       .subscribe(  //this is listening to the observable
         questions => {
-          this.questions= questions; //getting "questions" data array
-          console.log(this.questions);
+          this.question = questions[0]; //getting "questions" data array
+          console.log(this.question);
           },
         error =>  
         {this.errorMessage = <any>error; 
@@ -29,7 +29,6 @@ export class AppComponent implements OnInit {
 
         
   }  
-
 
   ngOnInit(){
     this.getQuestions()

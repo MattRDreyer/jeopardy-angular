@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { JeopardyDataService } from 'app/jeopardy-data.service'
 
 @Component({
   selector: 'app-game-canvas',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-canvas.component.css']
 })
 export class GameCanvasComponent implements OnInit {
+
+  @Input() potato;
 
   constructor() { }
 
