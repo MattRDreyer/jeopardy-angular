@@ -14,15 +14,28 @@ export class JeopardyDataService {
   
 
   constructor(private http: Http) { 
-    // this.generateCredentials();
   }
 
-  
-
-  getRecords(endpoint:string): Observable<any>{
+getRecord(endpoint:string): Observable<any>{
     let apiUrl = `${this.baseUrl}${endpoint}`;
     console.log(apiUrl);
     return this.http.get(apiUrl)
+      .map(this.extractData)   // "maps" the success- show the results
+      .catch(this.handleError);
+  }
+
+  getCatRecord(endpoint:string): Observable<any>{
+    let apiUrl = `${this.baseUrl}${endpoint}?category=`;
+    console.log(apiUrl);
+    return this.http.get(apiUrl)
+      .map(this.extractData)   // "maps" the success- show the results
+      .catch(this.handleError);
+  }
+
+getRecords(endpoint:string, rInt:number): Observable<any>{
+    let apiUrlCat = `${this.baseUrl}${endpoint}?count=3&offset=${rInt}`;
+    console.log(apiUrlCat);
+    return this.http.get(apiUrlCat)
       .map(this.extractData)   // "maps" the success- show the results
       .catch(this.handleError);
   }
@@ -48,3 +61,6 @@ export class JeopardyDataService {
     }
 
 }
+
+
+// http://jservice.io/api/clues?category=

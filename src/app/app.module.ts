@@ -9,6 +9,7 @@ import { StatusMessageComponent } from './status-message/status-message.componen
 import { GameCanvasComponent } from './game-canvas/game-canvas.component';
 import { JeopardyDataService } from './jeopardy-data.service';
 import { FormsModule } from '@angular/forms';
+import { CategoriesComponent } from './categories/categories.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     NavigationComponent,
     StatusMessageComponent,
     GameCanvasComponent,
+    CategoriesComponent,
 
   ],
   imports: [

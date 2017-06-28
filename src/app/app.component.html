@@ -8,6 +8,7 @@
 
 <div class="container">
 
+  <app-categories (catGetter)="getCatQuestions(catID)" (getter)="getQuestions()" [tomato]='categories'></app-categories>
   <app-status-message [errorMessage]='errorMessage' [successMessage]='successMessage'></app-status-message>
   <app-game-canvas (scored)="getQuestions()" [potato]='question'></app-game-canvas>
   <!--<app-scoreboard [tomato]='question'></app-scoreboard>-->
