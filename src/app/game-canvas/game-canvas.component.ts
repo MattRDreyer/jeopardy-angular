@@ -13,6 +13,7 @@ export class GameCanvasComponent implements OnInit {
 
   userAnswer: string = "";
   totalScore: number = 0;
+  gameMessage: string = "";
 
   constructor() { }
 
@@ -21,9 +22,12 @@ export class GameCanvasComponent implements OnInit {
 
   submitAnswer(){
     if (this.userAnswer == this.potato.answer){
-          this.totalScore += this.potato.value
-
+      this.totalScore += this.potato.value;
+      this.gameMessage = "Good Job!";
+    } else {
+      this.gameMessage = "You suck!";
     }
+    
   }
 
 }

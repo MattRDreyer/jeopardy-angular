@@ -1,6 +1,6 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"> {{potato?.category?.title | titlecase}} : Point Value {{potato?.value}}</h3>
+    <h3 class="panel-title"> {{potato?.category?.title | titlecase}}</h3>
   </div>
   <div class="panel-body">
     Question:
@@ -13,23 +13,45 @@
           <div class="input-group-addon">What is...</div>
           <input type="text" class="form-control" [(ngModel)]="userAnswer" placeholder="..............">
           <div class="input-group-addon">?</div>
+          <button type="submit" class="btn btn-primary submit" (click)="submitAnswer()">Submit Answer</button>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary submit" (click)="submitAnswer()">Submit Answer</button>
     <!--</form>-->
   </div>
   <div class="panel-footer">Guessed Answer: {{userAnswer}}</div>
   <div class="panel-footer">Returned Answer: {{potato?.answer}}</div>
 </div>
+
+<div class="alert alert-info">{{gameMessage}}</div>
+<!--
 <div class="panel panel-info">
   <div class="panel-heading">Question Value: {{potato?.value}}</div>
-</div>
+</div>-->
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Total Score</h3>
+
+
+<div class="row">
+
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Question Value</h3>
+      </div>
+      <div class="panel-body">
+        {{potato?.value}}
+      </div>
+    </div>
   </div>
-  <div class="panel-body">
-    {{totalScore}}
+
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Your Score</h3>
+      </div>
+      <div class="panel-body">
+        {{totalScore}}
+      </div>
+    </div>
   </div>
+
 </div>
