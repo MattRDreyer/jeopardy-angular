@@ -15,7 +15,7 @@ export class GameCanvasComponent implements OnInit {
   totalScore: number = 0;
   gameMessage: string = "";
 
-  constructor() { }
+  constructor(private JeopardyDataService: JeopardyDataService) { }
 
   ngOnInit() {
   }
@@ -28,6 +28,16 @@ export class GameCanvasComponent implements OnInit {
       this.gameMessage = "You suck!";
     }
     
+  }
+
+  newQuestion() {
+    this.JeopardyDataService.getRecords("random")
+
+      .subscribe(  //this is listening to the observable
+        questions => {
+          this.potato = questions[0]; //getting "questions" data array
+          console.log(this.potato);
+          })
   }
 
 }

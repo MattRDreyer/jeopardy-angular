@@ -26,8 +26,6 @@ export class AppComponent implements OnInit {
         error =>  
         {this.errorMessage = <any>error; 
           console.log(this.errorMessage)});
-
-        
   }  
 
   ngOnInit(){
