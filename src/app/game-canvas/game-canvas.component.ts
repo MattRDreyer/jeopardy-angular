@@ -26,6 +26,7 @@ export class GameCanvasComponent implements OnInit {
     } else {
       this.gameMessage = "You suck!";
     }
+    this.userAnswer = '';
     this.scored.emit()
   }
 
