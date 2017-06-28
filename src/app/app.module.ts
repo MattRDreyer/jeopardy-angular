@@ -8,7 +8,6 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { StatusMessageComponent } from './status-message/status-message.component';
 import { GameCanvasComponent } from './game-canvas/game-canvas.component';
 import { JeopardyDataService } from './jeopardy-data.service';
-import { ScoreboardComponent } from './scoreboard/scoreboard.component';
 import { FormsModule } from '@angular/forms';
 
 
@@ -18,7 +17,7 @@ import { FormsModule } from '@angular/forms';
     NavigationComponent,
     StatusMessageComponent,
     GameCanvasComponent,
-    ScoreboardComponent
+
   ],
   imports: [
     BrowserModule,

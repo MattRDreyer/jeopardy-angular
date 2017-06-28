@@ -12,6 +12,7 @@ export class GameCanvasComponent implements OnInit {
   @Input() potato;
 
   userAnswer: string = "";
+  totalScore: number = 0;
 
   constructor() { }
 
@@ -20,7 +21,8 @@ export class GameCanvasComponent implements OnInit {
 
   submitAnswer(){
     if (this.userAnswer == this.potato.answer){
-      
+          this.totalScore += this.potato.value
+
     }
   }
 
