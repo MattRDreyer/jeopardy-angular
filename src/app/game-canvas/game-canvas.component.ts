@@ -12,7 +12,10 @@ export class GameCanvasComponent implements OnInit {
 
   userAnswer: string = "";
   totalScore: number = 0;
-  gameMessage: string = "";
+  rightMessage: string = "";
+  wrongMessage: string ="";
+  rightCount: number = 0;
+  wrongCount: number = 0;
 
   constructor() { }
 
@@ -22,12 +25,18 @@ export class GameCanvasComponent implements OnInit {
   submitAnswer(){
     if (this.userAnswer == this.potato.answer){
       this.totalScore += this.potato.value;
-      this.gameMessage = "Good Job!";
+      this.rightMessage = "Good Job, you got " + (this.rightCount += 1) + " in a row!";
+      this.wrongMessage = ''; 
+      this.wrongCount = 0;
     } else {
-      this.gameMessage = "You suck!";
+      this.wrongMessage = "You suck, you missed " + (this.wrongCount += 1) + " in a row!";
+      this.rightMessage = ''; 
+      this.rightCount = 0;
     }
     this.userAnswer = '';
     this.scored.emit()
+
+     
   }
 
 }
