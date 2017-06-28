@@ -1,4 +1,4 @@
-<app-navigation></app-navigation>
+<!--<app-navigation></app-navigation>-->
 <div style="text-align:center">
   <h1>
     Welcome to {{title}}!!
@@ -9,7 +9,7 @@
 <div class="container">
 
   <app-status-message [errorMessage]='errorMessage' [successMessage]='successMessage'></app-status-message>
-  <app-game-canvas [potato]='question'></app-game-canvas>
+  <app-game-canvas (scored)="getQuestions()" [potato]='question'></app-game-canvas>
   <!--<app-scoreboard [tomato]='question'></app-scoreboard>-->
 
 </div>

@@ -1,6 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-
-import { JeopardyDataService } from 'app/jeopardy-data.service'
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-game-canvas',
@@ -10,12 +8,13 @@ import { JeopardyDataService } from 'app/jeopardy-data.service'
 export class GameCanvasComponent implements OnInit {
 
   @Input() potato;
+  @Output() scored = new EventEmitter();
 
   userAnswer: string = "";
   totalScore: number = 0;
   gameMessage: string = "";
 
-  constructor(private JeopardyDataService: JeopardyDataService) { }
+  constructor() { }
 
   ngOnInit() {
   }
@@ -27,17 +26,7 @@ export class GameCanvasComponent implements OnInit {
     } else {
       this.gameMessage = "You suck!";
     }
-    
-  }
-
-  newQuestion() {
-    this.JeopardyDataService.getRecords("random")
-
-      .subscribe(  //this is listening to the observable
-        questions => {
-          this.potato = questions[0]; //getting "questions" data array
-          console.log(this.potato);
-          })
+    this.scored.emit()
   }
 
 }
