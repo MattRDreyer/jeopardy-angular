@@ -1,21 +1,23 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"> {{potato?.category?.title}} : Point Value {{potato?.value}}</h3>
+    <h3 class="panel-title"> {{potato?.category?.title | titlecase}} : Point Value {{potato?.value}}</h3>
   </div>
   <div class="panel-body">
     Question:
     <h4 class="panel-title">{{potato?.question}}</h4>
   </div>
   <div class="panel-body">
-    <form class="form-inline questionForm">
+    <!--<form class="form-inline questionForm">-->
       <div class="form-group test">
         <div class="input-group">
           <div class="input-group-addon">What is...</div>
-          <input type="text" class="form-control" id="inputAnswer" placeholder="..............">
+          <input type="text" class="form-control" [(ngModel)]="userAnswer" placeholder="..............">
           <div class="input-group-addon">?</div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Submit Answer</button>
-    </form>
+      <button type="submit" class="btn btn-primary submit" (click)="submitAnswer()">Submit Answer</button>
+    <!--</form>-->
   </div>
+  <div class="panel-footer">Guessed Answer: {{userAnswer}}</div>
+  <div class="panel-footer">Returned Answer: {{potato?.answer}}</div>
 </div>

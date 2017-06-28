@@ -9,6 +9,7 @@ import { StatusMessageComponent } from './status-message/status-message.componen
 import { GameCanvasComponent } from './game-canvas/game-canvas.component';
 import { JeopardyDataService } from './jeopardy-data.service';
 import { ScoreboardComponent } from './scoreboard/scoreboard.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ScoreboardComponent } from './scoreboard/scoreboard.component';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [
     JeopardyDataService

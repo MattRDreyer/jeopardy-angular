@@ -11,9 +11,17 @@ export class GameCanvasComponent implements OnInit {
 
   @Input() potato;
 
+  userAnswer: string = "";
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  submitAnswer(){
+    if (this.userAnswer == this.potato.answer){
+      
+    }
   }
 
 }
