@@ -1,3 +1,7 @@
+<div [ngClass]="(wrongMessage)?'alert alert-danger':'alert alert-success'" role="alert" *ngIf="wrongMessage || rightMessage">
+    {{wrongMessage}} {{rightMessage}} 
+</div>
+
 <div class="panel panel-primary">
   <div class="panel-heading">
     <h3 class="panel-title"> {{potato?.category?.title | titlecase}}</h3>
