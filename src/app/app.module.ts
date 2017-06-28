@@ -8,6 +8,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { StatusMessageComponent } from './status-message/status-message.component';
 import { GameCanvasComponent } from './game-canvas/game-canvas.component';
 import { JeopardyDataService } from './jeopardy-data.service';
+import { ScoreboardComponent } from './scoreboard/scoreboard.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { JeopardyDataService } from './jeopardy-data.service';
     AppComponent,
     NavigationComponent,
     StatusMessageComponent,
-    GameCanvasComponent
+    GameCanvasComponent,
+    ScoreboardComponent
   ],
   imports: [
     BrowserModule,
