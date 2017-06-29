@@ -24,8 +24,8 @@ getRecord(endpoint:string): Observable<any>{
       .catch(this.handleError);
   }
 
-  getCatRecord(endpoint:string): Observable<any>{
-    let apiUrl = `${this.baseUrl}${endpoint}?category=`;
+  getCatRecord(endpoint:string,catID){
+    let apiUrl = `${this.baseUrl}${endpoint}?category=${catID}`;
     console.log(apiUrl);
     return this.http.get(apiUrl)
       .map(this.extractData)   // "maps" the success- show the results

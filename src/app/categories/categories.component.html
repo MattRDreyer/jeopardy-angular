@@ -10,21 +10,21 @@
   <div class="btn-group btn-group-justified catButtons" role="group" aria-label="categories">
 
     <div class="btn-group" role="group">
-      <button type="button" class="btn btn-default" (click)="getCatQuestion()">{{tomato[0]?.title | titlecase}}</button>
+      <button type="button" class="btn btn-default" (click)="getCatQuestion(tomato[0].id)">{{tomato[0]?.title | titlecase}}</button>
     </div>
 
   </div>
   <div class="btn-group btn-group-justified catButtons" role="group" aria-label="categories">
 
     <div class="btn-group" role="group">
-      <button type="button" class="btn btn-default" (click)="getCatQuestion()">{{tomato[1]?.title | titlecase}}</button>
+      <button type="button" class="btn btn-default" (click)="getCatQuestion(tomato[1].id)">{{tomato[1]?.title | titlecase}}</button>
     </div>
 
   </div>
   <div class="btn-group btn-group-justified catButtons" role="group" aria-label="categories">
 
     <div class="btn-group" role="group">
-      <button type="button" class="btn btn-default" (click)="getCatQuestion()">{{tomato[2]?.title | titlecase}}</button>
+      <button type="button" class="btn btn-default" (click)="getCatQuestion(tomato[2].id)">{{tomato[2]?.title | titlecase}}</button>
     </div>
 
   </div>

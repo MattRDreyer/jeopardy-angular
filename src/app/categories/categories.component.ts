@@ -20,8 +20,9 @@ export class CategoriesComponent implements OnInit {
     this.getter.emit();
   }
 
-  getCatQuestion(){
-    this.catGetter.emit();
+  getCatQuestion(catID){
+    this.catGetter.emit(catID);
+    // console.log(catID);
   }
 
 }

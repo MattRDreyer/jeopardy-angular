@@ -34,8 +34,9 @@ export class AppComponent implements OnInit {
           console.log(this.errorMessage)});
   }  
 
-  getCatQuestions(){
-    this.useanything.getCatRecord("clues") 
+  getCatQuestions(catID){
+    // console.log(catID);
+    this.useanything.getCatRecord("clues", catID) 
       .subscribe(  //this is listening to the observable
         questions => {
           this.question = questions[0]; //getting "questions" data array
