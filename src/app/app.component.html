@@ -10,7 +10,7 @@
 
   <app-categories (catGetter)="getCatQuestions($event)" (getter)="getQuestions()" [tomato]='categories'></app-categories>
   <app-status-message [errorMessage]='errorMessage' [successMessage]='successMessage'></app-status-message>
-  <app-game-canvas (scored)="getQuestions()" [potato]='question'></app-game-canvas>
+  <app-game-canvas (scored)="getCategories()" [potato]='question'></app-game-canvas>
   <!--<app-scoreboard [tomato]='question'></app-scoreboard>-->
 
 </div>

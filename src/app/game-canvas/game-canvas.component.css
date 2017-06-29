@@ -2,3 +2,7 @@
 .submit {
     float: right;
 }
+
+.questionContent {
+    height: 90px !important;
+}
